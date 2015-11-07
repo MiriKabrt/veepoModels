@@ -1,0 +1,7 @@
+{
+    "name": "Veepo/models",
+    "description": "Models for app which is built for veepo cms",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
