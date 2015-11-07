@@ -1,5 +1,10 @@
 {
     "name": "veepo/models",
+	 "autoload": {
+        "psr-0" : {
+            "Veepo\\Models" : "src"
+        }
+    },
     "description": "Models for app which is built for veepo cms",
     "require": {
         "php": ">=5.3.0"
