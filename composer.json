@@ -1,7 +1,7 @@
 {
     "name": "veepo/models",
 	"autoload": {
-		"psr-4": { "\\": "src/" }
+		"psr-4": { "Veepo\\Models\\": "src/" }
 	},
     "description": "Models for app which is built for veepo cms",
     "require": {
