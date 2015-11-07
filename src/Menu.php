@@ -9,6 +9,10 @@ use Nette;
  */
 class Menu extends Repository {
 	
+	public function findX(){
+		return 1;
+	}
+	
 	public function findImageById($id) {
 		return $this->connection->table('image')->where(':menu_has_image.menu_id', $id);
 	}
