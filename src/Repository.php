@@ -47,6 +47,22 @@ abstract class Repository extends Nette\Object
 	{
 		$this->language = $language;
 	}
+	
+	/**
+	 * 
+	 * @param type $field It is field of activeRows
+	 * @param type $val It is value which
+	 * @return type activeRow
+	 */
+	public function getRowByValue($field, $val){
+		foreach($field as $item){
+			if($item->value==$val){
+			  $result = $item;
+			  break;
+			}
+		}
+		return $item;
+	}
 
 	
 	public function findAllImage(){
