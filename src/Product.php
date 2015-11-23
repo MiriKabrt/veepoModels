@@ -79,7 +79,7 @@ class Product extends Repository {
 	}
 	
 	public function findAll() {
-		return $this->connection->table('product')->where('product.show', 1)->where(':product_t.language_id', $this->language);
+		return $this->connection->table('product')->where('product.show', 1)->where('product.deleted', 0)->where(':product_t.language_id', $this->language);
 	}
 	
 
