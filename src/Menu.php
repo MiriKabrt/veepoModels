@@ -40,7 +40,7 @@ class Menu extends Repository {
 	
 	
 	public function findAll() {
-		return $this->connection->table('menu')->where('menu.show', 1)->where(':menu_t.language_id', $this->language);
+		return $this->connection->table('menu')->where('menu.show', 1)->where('menu.deleted', 0)->where(':menu_t.language_id', $this->language);
 	}
 	
 	public function relatedByParent($item, $parent) {
@@ -48,7 +48,7 @@ class Menu extends Repository {
 	}
 	
 	public function relatedAll($item) {
-		return $item->related('menu')->where('menu.show', 1)->where(':menu_t.language_id', $this->language);
+		return $item->related('menu')->where('menu.show', 1)->where('menu.deleted', 0)->where(':menu_t.language_id', $this->language);
 	}
 	
 }
